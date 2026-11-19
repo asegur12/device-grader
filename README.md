@@ -1,4 +1,4 @@
-# Project-3-Device-grader
+# Grade My Device
 This is the third of three projects for my CSC 299 Ai lab final project. This program is one that takes in the storage and hardware data from the device your using, and creates a grade based of that data
 
 ## How to run
@@ -18,6 +18,18 @@ Answer `y` and it scans every local drive (read-only) and your hardware, then pr
    blue (system/programs/other) and pink (duplicate and junk files), plus a storage grade and next steps.
 2. **Device report**: device name and model, type/size/weight, CPU/RAM/storage/price,
    a summary, a grade against college and office-job standards, and upgrade advice.
+
+## How to run the tests
+
+From this folder (standard library `unittest`, no installs needed):
+
+```
+python -m unittest discover -s tests -v
+```
+
+The tests use fake hardware and storage data, so they never scan your real disk.
+Each test name starts with the requirement it checks (for example `test_r2_...` checks
+R2 in `problem.md`).
 
 ### Safety
 - Read-only: nothing is moved, changed or deleted.
